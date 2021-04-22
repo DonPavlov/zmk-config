@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (Bluehand)
-        run: west build -s zmk/app -b bluemicro840_v1 -- -DSHIELD=romac -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b bluemicro840_v1 -- -DSHIELD=bluehand -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Bluehand DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/bluemicro840_v1.dts.pre.tmp
